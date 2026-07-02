@@ -7,14 +7,18 @@ const STATS = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-zinc-950 py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="about" className="relative overflow-hidden bg-zinc-950 py-24">
+      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-amber-500/10 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
-              Our Story
-            </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-amber-500" />
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
+                Our Story
+              </p>
+            </div>
+            <h2 className="font-display text-4xl text-white sm:text-5xl">
               A neighborhood shop, built on craft
             </h2>
             <p className="mt-5 text-white/60 leading-relaxed">
@@ -36,7 +40,7 @@ export default function About() {
                 key={stat.label}
                 className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center transition-colors duration-300 hover:border-amber-500/30"
               >
-                <p className="text-3xl font-semibold text-amber-500">{stat.value}</p>
+                <p className="font-display text-4xl text-amber-500">{stat.value}</p>
                 <p className="mt-2 text-sm text-white/60">{stat.label}</p>
               </div>
             ))}

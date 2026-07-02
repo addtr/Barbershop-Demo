@@ -47,13 +47,17 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-zinc-950 py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="services" className="relative overflow-hidden bg-black py-24">
+      <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-amber-500/[0.07] blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
-            What We Offer
-          </p>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="h-px w-8 bg-amber-500" />
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
+              What We Offer
+            </p>
+          </div>
+          <h2 className="font-display text-4xl text-white sm:text-5xl">
             Services &amp; Pricing
           </h2>
           <p className="mt-4 text-white/60">

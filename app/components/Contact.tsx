@@ -13,13 +13,17 @@ const HOURS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-black py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="contact" className="relative overflow-hidden bg-zinc-950 py-24">
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-amber-500/[0.07] blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
-            Get In Touch
-          </p>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="h-px w-8 bg-amber-500" />
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
+              Get In Touch
+            </p>
+          </div>
+          <h2 className="font-display text-4xl text-white sm:text-5xl">
             Visit or Book a Chair
           </h2>
           <p className="mt-4 text-white/60">

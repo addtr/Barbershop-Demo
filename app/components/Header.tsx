@@ -33,7 +33,7 @@ export default function Header() {
           className="flex items-center gap-2 text-white transition-opacity hover:opacity-80"
         >
           <Scissors className="h-5 w-5 text-amber-500" />
-          <span className="text-lg font-semibold tracking-tight">Iron &amp; Fade</span>
+          <span className="font-display text-xl tracking-wide">Iron &amp; Fade</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
