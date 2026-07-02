@@ -34,11 +34,11 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 divide-x divide-y divide-white/10 border border-white/10">
             {STATS.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center transition-colors duration-300 hover:border-amber-500/30"
+                className="p-6 text-center transition-colors duration-300 hover:bg-white/[0.03]"
               >
                 <p className="font-display text-4xl text-amber-500">{stat.value}</p>
                 <p className="mt-2 text-sm text-white/60">{stat.label}</p>

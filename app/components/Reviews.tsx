@@ -63,13 +63,13 @@ export default function Reviews() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {REVIEWS.map((review) => (
             <div
               key={review.name}
-              className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/40 hover:bg-white/[0.06] hover:shadow-xl hover:shadow-black/40"
+              className="relative border-t-2 border-amber-500/30 pt-6 transition-colors duration-300 hover:border-amber-500/70"
             >
-              <Quote className="absolute top-6 right-6 h-8 w-8 text-white/[0.06]" />
+              <Quote className="absolute top-4 right-0 h-8 w-8 text-white/[0.06]" />
               <div className="flex text-amber-500">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star

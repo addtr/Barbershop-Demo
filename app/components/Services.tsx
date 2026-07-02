@@ -65,25 +65,27 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="border-t border-white/10">
           {SERVICES.map((service) => (
             <div
               key={service.name}
-              className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/40 hover:bg-white/[0.06] hover:shadow-xl hover:shadow-black/40"
+              className="group flex flex-col gap-4 border-b border-white/10 py-7 transition-colors duration-300 hover:bg-white/[0.02] sm:flex-row sm:items-start sm:justify-between sm:gap-8"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 transition-colors duration-300 group-hover:bg-amber-500/20">
-                <service.icon className="h-6 w-6 text-amber-500" />
+              <div className="flex gap-4">
+                <service.icon className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                  <p className="mt-1 text-xs uppercase tracking-wide text-white/40">
+                    {service.duration}
+                  </p>
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-white/60">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-              <div className="mt-5 flex items-baseline justify-between">
-                <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                <span className="text-lg font-semibold text-amber-500">{service.price}</span>
-              </div>
-              <p className="mt-1 text-xs uppercase tracking-wide text-white/40">
-                {service.duration}
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-white/60">
-                {service.description}
-              </p>
+              <span className="font-display shrink-0 text-2xl text-amber-500 sm:pl-6">
+                {service.price}
+              </span>
             </div>
           ))}
         </div>

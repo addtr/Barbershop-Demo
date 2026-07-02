@@ -48,7 +48,7 @@ export default function Header() {
           ))}
           <a
             href="#contact"
-            className="rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/30 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            className="rounded-md bg-amber-500 px-5 py-2 text-sm font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/30 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
             Book Now
           </a>
@@ -79,7 +79,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="w-fit rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-200 hover:bg-amber-400 active:translate-y-0"
+              className="w-fit rounded-md bg-amber-500 px-5 py-2 text-sm font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-200 hover:bg-amber-400 active:translate-y-0"
             >
               Book Now
             </a>
