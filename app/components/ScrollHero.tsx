@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const LERP_FACTOR = 0.22;
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function ScrollHero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,7 +59,7 @@ export default function ScrollHero() {
           className={`h-full w-full object-cover transition-opacity duration-500 ease-out ${
             visible ? "opacity-100" : "opacity-0"
           }`}
-          src="/hero.mp4"
+          src={`${BASE_PATH}/hero.mp4`}
           muted
           playsInline
           preload="auto"
