@@ -35,7 +35,7 @@ export default function ContactForm() {
             type="text"
             required
             placeholder="Jane Doe"
-            className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/30 focus:border-amber-500 focus:outline-none"
+            className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white transition-colors placeholder:text-white/30 focus:border-amber-500/60 focus:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-amber-500/30"
           />
         </div>
         <div>
@@ -47,7 +47,7 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             placeholder="(718) 555-0192"
-            className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/30 focus:border-amber-500 focus:outline-none"
+            className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white transition-colors placeholder:text-white/30 focus:border-amber-500/60 focus:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-amber-500/30"
           />
         </div>
       </div>
@@ -82,7 +82,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-amber-400 sm:w-auto"
+        className="w-full rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/30 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:w-auto"
       >
         Send Message
       </button>

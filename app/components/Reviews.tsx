@@ -58,7 +58,7 @@ export default function Reviews() {
           {REVIEWS.map((review) => (
             <div
               key={review.name}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/40 hover:bg-white/[0.06] hover:shadow-xl hover:shadow-black/40"
             >
               <div className="flex text-amber-500">
                 {Array.from({ length: 5 }).map((_, i) => (

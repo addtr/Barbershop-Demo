@@ -34,7 +34,7 @@ export default function About() {
             {STATS.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center transition-colors duration-300 hover:border-amber-500/30"
               >
                 <p className="text-3xl font-semibold text-amber-500">{stat.value}</p>
                 <p className="mt-2 text-sm text-white/60">{stat.label}</p>

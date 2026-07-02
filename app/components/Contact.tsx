@@ -30,7 +30,9 @@ export default function Contact() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-8">
             <div className="flex gap-4">
-              <MapPin className="mt-1 h-5 w-5 shrink-0 text-amber-500" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10">
+                <MapPin className="h-5 w-5 text-amber-500" />
+              </div>
               <div>
                 <h3 className="font-semibold text-white">Address</h3>
                 <p className="mt-1 text-sm text-white/60">
@@ -42,7 +44,9 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-4">
-              <Phone className="mt-1 h-5 w-5 shrink-0 text-amber-500" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10">
+                <Phone className="h-5 w-5 text-amber-500" />
+              </div>
               <div>
                 <h3 className="font-semibold text-white">Phone</h3>
                 <p className="mt-1 text-sm text-white/60">(718) 555-0192</p>
@@ -50,7 +54,9 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-4">
-              <Mail className="mt-1 h-5 w-5 shrink-0 text-amber-500" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10">
+                <Mail className="h-5 w-5 text-amber-500" />
+              </div>
               <div>
                 <h3 className="font-semibold text-white">Email</h3>
                 <p className="mt-1 text-sm text-white/60">hello@ironandfade.com</p>
@@ -58,7 +64,9 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-4">
-              <Clock className="mt-1 h-5 w-5 shrink-0 text-amber-500" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10">
+                <Clock className="h-5 w-5 text-amber-500" />
+              </div>
               <div className="w-full">
                 <h3 className="font-semibold text-white">Hours</h3>
                 <ul className="mt-2 space-y-1 text-sm text-white/60">

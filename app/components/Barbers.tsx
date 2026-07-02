@@ -1,8 +1,9 @@
-import { AtSign, Scissors } from "lucide-react";
+import { AtSign } from "lucide-react";
 
 const BARBERS = [
   {
     name: "Marcus Reyes",
+    initials: "MR",
     role: "Master Barber · Owner",
     experience: "12 years experience",
     specialty: "Skin fades & classic cuts",
@@ -10,6 +11,7 @@ const BARBERS = [
   },
   {
     name: "Devon Blake",
+    initials: "DB",
     role: "Senior Barber",
     experience: "8 years experience",
     specialty: "Beard sculpting & straight razor shaves",
@@ -17,6 +19,7 @@ const BARBERS = [
   },
   {
     name: "Sofia Marin",
+    initials: "SM",
     role: "Barber",
     experience: "5 years experience",
     specialty: "Modern textures & scissor work",
@@ -24,6 +27,7 @@ const BARBERS = [
   },
   {
     name: "Jalen Cross",
+    initials: "JC",
     role: "Junior Barber",
     experience: "2 years experience",
     specialty: "Kids cuts & line-ups",
@@ -51,10 +55,12 @@ export default function Barbers() {
           {BARBERS.map((barber) => (
             <div
               key={barber.name}
-              className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-transparent p-6"
+              className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-transparent p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/40 hover:shadow-xl hover:shadow-black/40"
             >
               <div className="flex h-32 w-full items-center justify-center rounded-xl bg-white/5">
-                <Scissors className="h-10 w-10 text-white/20" />
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-lg font-semibold text-black">
+                  {barber.initials}
+                </div>
               </div>
               <h3 className="mt-5 text-lg font-semibold text-white">{barber.name}</h3>
               <p className="text-sm font-medium text-amber-500">{barber.role}</p>

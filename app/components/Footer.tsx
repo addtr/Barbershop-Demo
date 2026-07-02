@@ -15,11 +15,19 @@ export default function Footer() {
           website.
         </p>
 
-        <div className="flex gap-4 text-white/50">
-          <a href="#" aria-label="Instagram" className="hover:text-amber-500">
+        <div className="flex gap-2 text-white/50">
+          <a
+            href="#"
+            aria-label="Instagram"
+            className="rounded-full p-2 transition-colors hover:bg-white/10 hover:text-amber-500"
+          >
             <AtSign className="h-4 w-4" />
           </a>
-          <a href="#" aria-label="Website" className="hover:text-amber-500">
+          <a
+            href="#"
+            aria-label="Website"
+            className="rounded-full p-2 transition-colors hover:bg-white/10 hover:text-amber-500"
+          >
             <Globe className="h-4 w-4" />
           </a>
         </div>

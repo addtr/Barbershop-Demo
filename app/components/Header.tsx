@@ -28,7 +28,10 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2 text-white">
+        <a
+          href="#top"
+          className="flex items-center gap-2 text-white transition-opacity hover:opacity-80"
+        >
           <Scissors className="h-5 w-5 text-amber-500" />
           <span className="text-lg font-semibold tracking-tight">Iron &amp; Fade</span>
         </a>
@@ -38,21 +41,21 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/80 transition-colors hover:text-white"
+              className="relative rounded text-sm font-medium text-white/80 transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-amber-500 after:transition-all after:duration-300 hover:text-white hover:after:w-full focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/70"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-amber-400"
+            className="rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/30 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
             Book Now
           </a>
         </nav>
 
         <button
-          className="text-white md:hidden"
+          className="rounded-full p-2 text-white transition-colors hover:bg-white/10 md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -68,7 +71,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-white/80 hover:text-white"
+                className="text-sm font-medium text-white/80 transition-colors hover:text-white"
               >
                 {link.label}
               </a>
@@ -76,7 +79,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="w-fit rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-black"
+              className="w-fit rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-200 hover:bg-amber-400 active:translate-y-0"
             >
               Book Now
             </a>
