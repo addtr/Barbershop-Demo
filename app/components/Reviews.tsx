@@ -1,4 +1,5 @@
 import { Quote, Star } from "lucide-react";
+import Reveal from "./Reveal";
 
 const REVIEWS = [
   {
@@ -41,9 +42,10 @@ const REVIEWS = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="bg-black py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mb-14 max-w-2xl">
+    <section id="reviews" className="relative overflow-hidden bg-black py-24">
+      <div className="pointer-events-none absolute -top-24 -left-32 h-96 w-96 animate-pulse rounded-full bg-amber-500/[0.07] blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6">
+        <Reveal className="mb-14 max-w-2xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-amber-500" />
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
@@ -61,33 +63,32 @@ export default function Reviews() {
             </div>
             <span className="text-sm">4.9 out of 5 &middot; 214 reviews</span>
           </div>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-          {REVIEWS.map((review) => (
-            <div
-              key={review.name}
-              className="relative border-t-2 border-amber-500/30 pt-6 transition-colors duration-300 hover:border-amber-500/70"
-            >
-              <Quote className="absolute top-4 right-0 h-8 w-8 text-white/[0.06]" />
-              <div className="flex text-amber-500">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`h-4 w-4 ${i < review.rating ? "fill-amber-500" : "text-white/20"}`}
-                  />
-                ))}
-              </div>
-              <p className="mt-4 text-sm leading-relaxed text-white/70">
-                &ldquo;{review.text}&rdquo;
-              </p>
-              <div className="mt-5 flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-xs font-semibold text-black">
-                  {review.initials}
+          {REVIEWS.map((review, i) => (
+            <Reveal key={review.name} delay={i * 60}>
+              <div className="relative border-t-2 border-amber-500/30 pt-6 transition-colors duration-300 hover:border-amber-500/70">
+                <Quote className="absolute top-4 right-0 h-8 w-8 text-white/[0.06]" />
+                <div className="flex text-amber-500">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-4 w-4 ${i < review.rating ? "fill-amber-500" : "text-white/20"}`}
+                    />
+                  ))}
                 </div>
-                <p className="text-sm font-semibold text-white">{review.name}</p>
+                <p className="mt-4 text-sm leading-relaxed text-white/70">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className="mt-5 flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-xs font-semibold text-black">
+                    {review.initials}
+                  </div>
+                  <p className="text-sm font-semibold text-white">{review.name}</p>
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

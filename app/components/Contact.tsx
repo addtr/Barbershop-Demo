@@ -1,5 +1,6 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "./ContactForm";
+import Reveal from "./Reveal";
 
 const HOURS = [
   { day: "Monday", time: "9:00 AM – 8:00 PM" },
@@ -14,9 +15,10 @@ const HOURS = [
 export default function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden bg-zinc-950 py-24">
-      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-amber-500/[0.07] blur-3xl" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 animate-pulse rounded-full bg-amber-500/[0.07] blur-3xl" />
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="mb-14 max-w-2xl">
+        <Reveal className="mb-14 max-w-2xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-amber-500" />
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-500">
@@ -29,10 +31,10 @@ export default function Contact() {
           <p className="mt-4 text-white/60">
             Walk-ins are always welcome, but booking ahead guarantees your barber and time slot.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-2 space-y-7 divide-y divide-white/10">
+          <Reveal className="lg:col-span-2 space-y-7 divide-y divide-white/10">
             <div className="flex gap-4">
               <MapPin className="mt-1 h-5 w-5 shrink-0 text-amber-500" />
               <div>
@@ -75,11 +77,11 @@ export default function Contact() {
                 </ul>
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-3">
+          <Reveal className="lg:col-span-3" delay={150}>
             <ContactForm />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
